@@ -4,6 +4,7 @@ export enum GamePhase {
   PLAYER_TURN = 'PLAYER_TURN',
   DEALER_TURN = 'DEALER_TURN',
   QUANTUM_CHOICE = 'QUANTUM_CHOICE',
+  QUANTUM_ROLLING = 'QUANTUM_ROLLING',
   RESULT = 'RESULT'
 }
 
@@ -19,6 +20,7 @@ export interface GameState {
   message: string;
   dealerThinking: boolean;
   isQuantumGambleActive: boolean;
+  isCounterActive: boolean; // Tracks if "Counter" was pre-selected
 }
 
 export interface DealerCommentary {
